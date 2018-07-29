@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 @Component() // uses the default bean id -> angryMonster
 public class AngryMonster implements Monster {
 
+    // field injection
+    @Autowired
     private Weapon weapon;
 
     /*
@@ -16,11 +18,13 @@ public class AngryMonster implements Monster {
     }
     */
 
+    /*
     // setter injection
     @Autowired
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
+    */
 
     @Override
     public String attack() {
