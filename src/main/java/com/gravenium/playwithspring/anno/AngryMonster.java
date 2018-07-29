@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component() // uses the default bean id -> angryMonster
+@Component // uses the default bean id -> angryMonster
 public class AngryMonster implements Monster {
 
     // field injection
