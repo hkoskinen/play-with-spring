@@ -7,6 +7,7 @@ public class KnightMain {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("knight.xml");
         Knight knight = context.getBean(Knight.class);
         knight.embarkOnQuest();
+        knight.doDailyTraining();
         context.close();
     }
 }

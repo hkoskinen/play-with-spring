@@ -3,10 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="quest" class="com.gravenium.playwithspring.RescuePrincessQuest"></bean>
+    <bean id="quest" class="com.gravenium.playwithspring.RescuePrincessQuest" />
+
+    <bean id="training" class="com.gravenium.playwithspring.TrainingService" />
 
     <bean id="knight" class="com.gravenium.playwithspring.BraveKnight">
+        <!-- constructor injection -->
         <constructor-arg ref="quest" />
+
+        <!-- setter injection -->
+        <property name="trainingService" ref="training" />
     </bean>
 
 </beans>
