@@ -20,4 +20,12 @@ public class Fielder {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public void initStuff() {
+        System.out.println("Fielder - init bean");
+    }
+
+    public void destroyStuff() {
+        System.out.println("Fielder - destroy bean");
+    }
 }

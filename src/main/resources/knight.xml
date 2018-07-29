@@ -18,7 +18,8 @@
         <property name="trainingService" ref="training" />
     </bean>
 
-    <bean id="fielder" class="com.gravenium.playwithspring.Fielder">
+    <bean id="fielder" class="com.gravenium.playwithspring.Fielder"
+        init-method="initStuff" destroy-method="destroyStuff">
         <!-- inject literal value -->
         <property name="name" value="John Ripper" />
 
