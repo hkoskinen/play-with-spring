@@ -10,7 +10,7 @@
 
     <bean id="training" class="com.gravenium.playwithspring.TrainingService" />
 
-    <bean id="knight" class="com.gravenium.playwithspring.BraveKnight">
+    <bean id="knight" class="com.gravenium.playwithspring.BraveKnight" scope="prototype">
         <!-- constructor injection -->
         <constructor-arg ref="quest" />
 
