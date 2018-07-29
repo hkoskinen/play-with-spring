@@ -8,6 +8,11 @@ public class KnightMain {
         Knight knight = context.getBean(Knight.class);
         knight.embarkOnQuest();
         knight.doDailyTraining();
+
+        Fielder fielder = context.getBean(Fielder.class);
+        System.out.println("My name is " + fielder.getName());
+        System.out.println("My email address is " + fielder.getEmail());
+
         context.close();
     }
 }
