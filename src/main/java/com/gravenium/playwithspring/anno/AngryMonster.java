@@ -1,6 +1,7 @@
 package com.gravenium.playwithspring.anno;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component() // uses the default bean id -> angryMonster
@@ -8,6 +9,7 @@ public class AngryMonster implements Monster {
 
     // field injection
     @Autowired
+    @Qualifier("greatSword") // use the specific bean id you want to use
     private Weapon weapon;
 
     /*
