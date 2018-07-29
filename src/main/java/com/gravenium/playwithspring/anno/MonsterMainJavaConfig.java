@@ -6,8 +6,9 @@ public class MonsterMainJavaConfig {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MonsterConfig.class);
-        Monster monster = context.getBean("strongMonster", Monster.class);
+        StrongMonster monster = context.getBean("strongMonster", StrongMonster.class);
         System.out.println(monster.attack());
+        System.out.println("My name is " + monster.getName());
         context.close();
     }
 
