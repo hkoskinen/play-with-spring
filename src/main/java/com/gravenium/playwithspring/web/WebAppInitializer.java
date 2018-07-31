@@ -11,12 +11,12 @@ public class WebAppInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext servletContext) {
         AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
-        appContext.register(AppConfig.class);
-        appContext.refresh();
+        appContext.register(WebConfig.class);
+        //appContext.refresh();
 
-        DispatcherServlet servlet = new DispatcherServlet(appContext);
-        ServletRegistration.Dynamic registration = servletContext.addServlet("app", servlet);
-        registration.setLoadOnStartup(1);
-        registration.addMapping("/");
+        ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(appContext));
+        dispatcher.setLoadOnStartup(1);
+        dispatcher.addMapping("/");
+        System.out.println("------------------------------ onStartup Called ------------------------------");
     }
 }
