@@ -12,11 +12,9 @@ public class WebAppInitializer implements WebApplicationInitializer {
     public void onStartup(ServletContext servletContext) {
         AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
         appContext.register(WebConfig.class);
-        //appContext.refresh();
 
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(appContext));
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
-        System.out.println("------------------------------ onStartup Called ------------------------------");
     }
 }
