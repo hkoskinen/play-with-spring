@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class HomeController {
 
@@ -20,8 +22,12 @@ public class HomeController {
     }
 
     @GetMapping("/handle-form")
-    public String handleForm(Model model) {
-        model.addAttribute("", "");
+    public String handleForm(Model model, HttpServletRequest request) {
+        String name = request.getParameter("name");
+        model.addAttribute("name", name.toUpperCase());
+        model.addAttribute("email", request.getParameter("email"));
+        model.addAttribute("message", request.getParameter("message"));
+
         return "handle-form";
     }
 }
