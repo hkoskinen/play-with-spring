@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: losti
   Date: 3.8.2018
-  Time: 14:25
+  Time: 17:22
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
@@ -10,13 +10,12 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>${t}</title>
+    <title>handle</title>
 </head>
 <body>
-    <h1>${h}</h1>
-
-    <hr>
-
-    <a href="contact-form">contact</a>
+    <h1>handle</h1>
+    <p>Name: ${param.name}</p>
+    <p>Email: ${param.email}</p>
+    <p>Message: ${param.message}</p>
 </body>
 </html>

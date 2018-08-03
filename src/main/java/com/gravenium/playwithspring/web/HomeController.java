@@ -13,4 +13,15 @@ public class HomeController {
         model.addAttribute("h", "Hello from Spring MVC controller!");
         return "index";
     }
+
+    @GetMapping("/contact-form")
+    public String showForm() {
+        return "contact-form";
+    }
+
+    @GetMapping("/handle-form")
+    public String handleForm(Model model) {
+        model.addAttribute("", "");
+        return "handle-form";
+    }
 }
