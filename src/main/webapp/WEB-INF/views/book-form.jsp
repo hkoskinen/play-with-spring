@@ -17,6 +17,10 @@
             <form:options items="${book.genres}" />
         </form:select></p>
 
+        <p>Book type:</p>
+        <label>Paperback <form:radiobutton path="bookType" value="paperback" /></label>
+        <label>Hardcover <form:radiobutton path="bookType" value="hardcover" /></label>
+
         <p><input type="submit" value="Add Book"></p>
     </form:form>
 

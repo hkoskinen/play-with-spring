@@ -7,6 +7,7 @@ public class Book {
     private String title;
     private String author;
     private String genre;
+    private String bookType;
 
     private LinkedHashMap<String, String> genres;
 
@@ -17,7 +18,6 @@ public class Book {
         genres.put("Biography", "Biography");
         genres.put("Adventure", "Adventure");
         genres.put("Business", "Business");
-
     }
 
     public String getTitle() {
@@ -46,5 +46,13 @@ public class Book {
 
     public LinkedHashMap<String, String> getGenres() {
         return genres;
+    }
+
+    public String getBookType() {
+        return bookType;
+    }
+
+    public void setBookType(String bookType) {
+        this.bookType = bookType;
     }
 }

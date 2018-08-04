@@ -21,7 +21,8 @@ public class BookController {
     public String processBookForm(@ModelAttribute Book book) {
         System.out.println("Book title: " + book.getTitle()
                 + "\nBook author: " + book.getAuthor()
-                + "\nBook genre: " + book.getGenre());
+                + "\nBook genre: " + book.getGenre()
+                + "\nBook type: " + book.getBookType());
         return "book-confirmation";
     }
 

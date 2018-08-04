@@ -9,5 +9,6 @@
     <p>Book title: ${book.title}</p>
     <p>Book author: ${book.author}</p>
     <p>Book genre: ${book.genre}</p>
+    <p>Book type: ${book.bookType}</p>
 </body>
 </html>
