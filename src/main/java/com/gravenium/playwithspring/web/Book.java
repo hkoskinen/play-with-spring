@@ -1,10 +1,24 @@
 package com.gravenium.playwithspring.web;
 
+import java.util.LinkedHashMap;
+
 public class Book {
 
     private String title;
     private String author;
     private String genre;
+
+    private LinkedHashMap<String, String> genres;
+
+    public Book() {
+        genres = new LinkedHashMap<>();
+        genres.put("Horror", "Horror");
+        genres.put("Thriller", "Thriller");
+        genres.put("Biography", "Biography");
+        genres.put("Adventure", "Adventure");
+        genres.put("Business", "Business");
+
+    }
 
     public String getTitle() {
         return title;
@@ -28,5 +42,9 @@ public class Book {
 
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    public LinkedHashMap<String, String> getGenres() {
+        return genres;
     }
 }

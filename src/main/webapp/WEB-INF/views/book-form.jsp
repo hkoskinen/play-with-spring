@@ -14,10 +14,7 @@
         <p>Author: <form:input path="author" /></p>
 
         <p>Genre: <form:select path="genre">
-            <form:option value="Horror" label="Horror" />
-            <form:option value="Thriller" label="Thriller" />
-            <form:option value="Biography" label="Biography" />
-            <form:option value="History" label="History" />
+            <form:options items="${book.genres}" />
         </form:select></p>
 
         <p><input type="submit" value="Add Book"></p>
