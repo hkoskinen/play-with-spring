@@ -8,5 +8,6 @@
     <h1>Book Confirmation</h1>
     <p>Book title: ${book.title}</p>
     <p>Book author: ${book.author}</p>
+    <p>Book genre: ${book.genre}</p>
 </body>
 </html>

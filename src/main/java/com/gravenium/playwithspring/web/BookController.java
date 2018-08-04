@@ -19,7 +19,9 @@ public class BookController {
 
     @PostMapping("/process-form")
     public String processBookForm(@ModelAttribute Book book) {
-        System.out.println("Book title: " + book.getTitle() + "\nBook author: " + book.getAuthor());
+        System.out.println("Book title: " + book.getTitle()
+                + "\nBook author: " + book.getAuthor()
+                + "\nBook genre: " + book.getGenre());
         return "book-confirmation";
     }
 
