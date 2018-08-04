@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,5 +11,13 @@
     <p>Book author: ${book.author}</p>
     <p>Book genre: ${book.genre}</p>
     <p>Book type: ${book.bookType}</p>
+
+    <ul>
+        <c:forEach var="checkboxerVal" items="${book.checkboxer}">
+            <li>${checkboxerVal}</li>
+        </c:forEach>
+    </ul>
+
+
 </body>
 </html>

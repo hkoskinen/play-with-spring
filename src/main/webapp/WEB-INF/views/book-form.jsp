@@ -21,6 +21,12 @@
         <label>Paperback <form:radiobutton path="bookType" value="paperback" /></label>
         <label>Hardcover <form:radiobutton path="bookType" value="hardcover" /></label>
 
+        <p>Just select few of these checkboxes:</p>
+        one <form:checkbox path="checkboxer" value="one" />
+        two <form:checkbox path="checkboxer" value="two" />
+        three <form:checkbox path="checkboxer" value="three" />
+
+
         <p><input type="submit" value="Add Book"></p>
     </form:form>
 

@@ -8,6 +8,7 @@ public class Book {
     private String author;
     private String genre;
     private String bookType;
+    private String[] checkboxer;
 
     private LinkedHashMap<String, String> genres;
 
@@ -54,5 +55,13 @@ public class Book {
 
     public void setBookType(String bookType) {
         this.bookType = bookType;
+    }
+
+    public String[] getCheckboxer() {
+        return checkboxer;
+    }
+
+    public void setCheckboxer(String[] checkboxer) {
+        this.checkboxer = checkboxer;
     }
 }
