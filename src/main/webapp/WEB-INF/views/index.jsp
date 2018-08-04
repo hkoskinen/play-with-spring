@@ -11,5 +11,6 @@
 
     <a href="contact-form">contact</a>
     <a href="book/show-book-form">book form</a>
+    <a href="customer/customer-form">customer form</a>
 </body>
 </html>
